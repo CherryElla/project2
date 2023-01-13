@@ -1,8 +1,9 @@
 const router = require('express').Router();
 const userRoutes = require('./userRoutes');
-const projectRoutes = require('./projectRoutes');
+const petRoutes = require('./petRoutes');
 
+//Routes to the user or pet API db
 router.use('/users', userRoutes);
-router.use('/projects', projectRoutes);
+router.use('/pets', petRoutes);
 
 module.exports = router;
