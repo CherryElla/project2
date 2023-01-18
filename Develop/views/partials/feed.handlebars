@@ -1,0 +1,36 @@
+
+<nav class="navbar" style="background-color: white;">
+   <form class="container-fluid justify-content-end">
+    <button class="btn btn-outline-success me-2" type="button">➕</button>
+    <button class="btn btn-outline-success me-2" type="button">🖤</button>
+    <button class="btn btn-outline-success me-2" type="button">💬</button>
+  </form>
+</nav>
+<div class="" style="background-color: rgb(1, 53, 67); width: 100%;">
+    {{#each posts as |post|}}
+        <div class="row">
+            <div class="col d-flex justify-content-center m-1">
+
+                <div class="card" style="width:400px;">
+                    <img src="{{post.photo}}" class="card-img-top" alt="..." />
+                    <div class="row card-body" style="height: 150px;">
+                        <div class="card-title text-center">
+                            <h6>{{post.user_name}}
+                                <span class="d-flex justify-content-end">
+                                    1 👍
+                                </span>
+                            </h6>
+
+                            <p class="card-text">{{post.text}}</p>
+                            <a
+                                href="#"
+                                class="btn btn-primary"
+                                style="width: 70px;"
+                            >Like</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {{/each}}
+</div>
