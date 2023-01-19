@@ -4,7 +4,7 @@
             class="btn btn-outline-success me-2"
             type="button"
             data-bs-toggle="modal"
-            data-bs-target="#exampleModal"
+            data-bs-target="#addPost"
         >➕</button>
         <button class="btn btn-outline-success me-2" type="button">🖤</button>
         <button class="btn btn-outline-success me-2" type="button">💬</button>
@@ -41,7 +41,7 @@
     <!-- Modal -->
     <div
         class="modal fade"
-        id="exampleModal"
+        id="addPost"
         tabindex="-1"
         aria-labelledby="exampleModalLabel"
         aria-hidden="true"
@@ -49,8 +49,7 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Modal
-                        title</h1>
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Create Post</h1>
                     <button
                         type="button"
                         class="btn-close"
@@ -59,15 +58,22 @@
                     ></button>
                 </div>
                 <div class="modal-body">
-                    ...
+                    <div class="container-md ">
+                        <div class="row">
+                            <input type="file">
+                            <img src="/images/paw.png" alt="paw silhouette" style="opacity: 20%;">
+                        </div>
+
+                    </div>
                 </div>
                 <div class="modal-footer">
+
                     <button
                         type="button"
                         class="btn btn-secondary"
                         data-bs-dismiss="modal"
-                    >Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
+                    >Cancel</button>
+                    <button type="button" class="btn btn-primary">Post</button>
                 </div>
             </div>
         </div>
