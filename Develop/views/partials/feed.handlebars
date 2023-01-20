@@ -1,17 +1,17 @@
-<div class="" style="background-color: white; width: 100%; background-image:url('/images/pawprint.jpeg')">
-    <form class="container-fluid justify-content-end">
+<div class="container">
+    <form class="container-fluid p-2">
         <button
-            class="btn btn-outline-info me-2"
+            class="btn btn-info me-2"
             type="button"
             data-bs-toggle="modal"
             data-bs-target="#addPost"
         >➕</button>
-        <button class="btn btn-outline-info me-2" type="button">🖤</button>
-        <button class="btn btn-outline-info me-2" type="button">💬</button>
+        <button class="btn btn-info me-2" type="button">🖤</button>
+        <button class="btn btn-info me-2" type="button">💬</button>
     </form>
     {{#each posts as |post|}}
         <div class="row">
-            <div class="col d-flex justify-content-center m-1">
+            <div class="col d-flex justify-content-center">
 
                 <div class="card" style="width:400px; ">
                     <img src="{{post.photo}}" class="card-img-top" alt="..." />
@@ -22,12 +22,11 @@
                                     1 👍
                                 </span>
                             </h6>
-
-                            <p class="card-text">{{post.text}}</p>
+                            <p class="card-text" style="color:black; height: 10px; font-size: 10px;">{{post.text}} </p>
                             <a
                                 href="#"
                                 class="btn btn-primary"
-                                style="width: 70px;"
+                                style="width: 70px; "
                             >Like</a>
                         </div>
                     </div>
@@ -47,7 +46,8 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h2 class="modal-title fs-5" id="exampleModalLabel">Create Post</h2>
+                    <h2 class="modal-title fs-5" id="exampleModalLabel">Create
+                        Post</h2>
                     <button
                         type="button"
                         class="btn-close"
@@ -56,10 +56,14 @@
                     ></button>
                 </div>
                 <div class="modal-body">
-                    <div class="container-md ">
+                    <div class="container-md">
                         <div class="row imgDiv">
-                            <input type="file" class="chooseFile">
-                            <img src="/images/paw.png" alt="paw silhouette" style="opacity: 20%;">
+                            <input type="file" class="chooseFile" />
+                            <img
+                                src="/images/paw.png"
+                                alt="paw silhouette"
+                                style="opacity: 20%;"
+                            />
                         </div>
 
                     </div>
