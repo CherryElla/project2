@@ -3,6 +3,7 @@
     --test-color2: #1A2601; */
 }
 
+/* Map HTML */
 #map {
     height: 800px;
     width: 60%;
@@ -12,4 +13,21 @@
 #locations {
     width: 40%;
     float: left;
+}
+
+/* Sign up/Log in HTML */
+#login {
+    width: 50%;
+    float: left;
+    padding: 100px;
+}
+
+#signup {
+    width: 50%;
+    float: right;
+    padding: 100px;
+}
+
+.userInput {
+    padding: 5px;
 }
