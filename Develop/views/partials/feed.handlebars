@@ -1,21 +1,19 @@
-<nav class="navbar" style="background-color: white;">
+<div class="" style="background-color: white; width: 100%; background-image:url('/images/pawprint.jpeg')">
     <form class="container-fluid justify-content-end">
         <button
-            class="btn btn-outline-success me-2"
+            class="btn btn-outline-info me-2"
             type="button"
             data-bs-toggle="modal"
             data-bs-target="#addPost"
         >➕</button>
-        <button class="btn btn-outline-success me-2" type="button">🖤</button>
-        <button class="btn btn-outline-success me-2" type="button">💬</button>
+        <button class="btn btn-outline-info me-2" type="button">🖤</button>
+        <button class="btn btn-outline-info me-2" type="button">💬</button>
     </form>
-</nav>
-<div class="" style="background-color: rgb(1, 53, 67); width: 100%;">
     {{#each posts as |post|}}
         <div class="row">
             <div class="col d-flex justify-content-center m-1">
 
-                <div class="card" style="width:400px;">
+                <div class="card" style="width:400px; ">
                     <img src="{{post.photo}}" class="card-img-top" alt="..." />
                     <div class="row card-body" style="height: 150px;">
                         <div class="card-title text-center">
@@ -49,7 +47,7 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Create Post</h1>
+                    <h2 class="modal-title fs-5" id="exampleModalLabel">Create Post</h2>
                     <button
                         type="button"
                         class="btn-close"
@@ -59,8 +57,8 @@
                 </div>
                 <div class="modal-body">
                     <div class="container-md ">
-                        <div class="row">
-                            <input type="file">
+                        <div class="row imgDiv">
+                            <input type="file" class="chooseFile">
                             <img src="/images/paw.png" alt="paw silhouette" style="opacity: 20%;">
                         </div>
 
