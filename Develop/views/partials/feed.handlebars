@@ -22,7 +22,10 @@
                                     1 👍
                                 </span>
                             </h6>
-                            <p class="card-text" style="color:black; height: 10px; font-size: 10px;">{{post.text}} </p>
+                            <p
+                                class="card-text"
+                                style="color:black; height: 10px; font-size: 10px;"
+                            >{{post.text}} </p>
                             <a
                                 href="#"
                                 class="btn btn-primary"
@@ -58,12 +61,16 @@
                 <div class="modal-body">
                     <div class="container-md">
                         <div class="row imgDiv">
-                            <input type="file" class="chooseFile" />
-                            <img
-                                src="/images/paw.png"
-                                alt="paw silhouette"
-                                style="opacity: 20%;"
-                            />
+                            <form method="POST" action="/api/createpost">
+                                <input type="file" class="chooseFile" />
+                                <div id="tempImg">
+                                    <img
+                                        src="/images/paw.png"
+                                        alt="paw silhouette"
+                                        style="opacity: 20%;"
+                                    />
+                                </div>
+                            </form>
                         </div>
 
                     </div>

@@ -1,18 +1,24 @@
-const uploadImg = document.querySelector(".chooseFile")
 
-uploadImg.addEventListener("click", uploadHandler);
+function sendPost () {
+    let img = $("input.chooseFile").value
+    console.log(img)
+
+}
 
 
-function uploadImg (event) {
+
+
+
+function displayImg (event) {
     // When upload image button clicked the user will be propted to select
     // an image from their local and it will be rendered to window modal
-    let displayDiv = $("div.imgDiv");
+    let imgDiv = $("div#tempImg");
     let read = new FileReader();
     let file = event.target.files[0];
 
     read.onload = function (event) {
         let imageSource = event.target.result;
-        displayDiv.html('<img src="' + imageSource + '"alt="dog photo">')
+        imgDiv.html('<img src="' + imageSource + '"alt="dog photo">')
 
     };
     read.readAsDataURL(file);
@@ -21,6 +27,6 @@ function uploadImg (event) {
 
 $(document).ready(function(){
 
-    $('input.chooseFile').on('change', uploadImg);
+    $('input.chooseFile').on('change', displayImg);
    
 });
