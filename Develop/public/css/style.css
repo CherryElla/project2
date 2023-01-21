@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "paw";
+    src: url("/images/paw.ttf");
+} 
+
 :root {
     /* --test-color1: #0D0D0D;
     --test-color2: #1A2601; */
@@ -15,6 +20,40 @@
     float: left;
 }
 
+body {
+    background-color: #001f52;
+}
+
+body p {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 30px;
+    color: white;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    padding-left: 20px;
+    font-style: italic;
+}
+
+.logo {
+    padding-left: 30px;
+    background-color: #31393c;
+    color: #fdd35d;
+    font-family: "paw";
+    font-size: 100px;
+}
+
+
+.feed .rightCol {
+    border-left: solid;
+    border-left-color: #fdd35d;
+    background-color: white;
+    background-image:url('/images/pawprint.jpeg');
+}
+
+.feed .leftCol {
+    vertical-align: middle;
+}
+
 /* Sign up/Log in HTML */
 #login {
     width: 50%;
@@ -30,4 +69,5 @@
 
 .userInput {
     padding: 5px;
+
 }
