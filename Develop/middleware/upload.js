@@ -36,6 +36,6 @@ const uploadImage = multer({
     fileFilter: (req, file, callback) => {
         fileTypeChecker(file, callback)
     }
-}).any()
+});
 
-module.exports = util.promisify(uploadImage)
+module.exports = uploadImage

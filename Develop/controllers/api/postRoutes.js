@@ -1,12 +1,22 @@
-const { Post } = require("../../models");
+const  Post  = require("../../models/Post");
 const router = require("express").Router();
 const uploadImage = require("../../middleware/upload");
 
-router.post("/create", async (req, res) => {
+router.post("/create", uploadImage.single('image'), async (req, res, next) => {
+    // req.file will hold the image file 
+    // req.body will hold the text fields, if any
+
     try {
-        await uploadImage(req, res);
+        console.log(req.body)
+        const filename = req.file.filename;
+        let postData = {
+            type: req.file.mimetype,
+            name: filename,
+            // text: req.body.description
+        }
         
-        res.sendStatus(200);
+        // let post = await Post.create(postData);
+        res.status(200).json(postData);
     } catch (err) {
         console.log("Error", err);
         res.status(500).json(err);

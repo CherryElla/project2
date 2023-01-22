@@ -14,7 +14,7 @@ async function sendPostData () {
     switch (response.status) {
         case 200:
             // TODO: Remove Modal and refresh post list
-            console.log('GREAT')
+            console.log(response)
             break;
         default:
             // TODO: Display any errors in submission
