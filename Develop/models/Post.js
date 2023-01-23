@@ -4,29 +4,35 @@ const { Model, DataTypes } = require("sequelize");
 class Post extends Model {}
 
 Post.init({
-    image: {
+    id: {
+        type: DataTypes.INTEGER,
+        primaryKey: true,
+        autoIncrement: true
+    },
+    imageFileName: {
         type: DataTypes.STRING,
     },
-    createdDate: {
-        type: DataTypes.DATE,
-        allowNull: false,
-        defaultValue: sequelize.fn("now")
-    },
-    userName: {
+    user_id: {
         type: DataTypes.STRING,
-        // defaultValue: userName // add correct data here
+        references:{
+            model: "user",
+            key: "id"
+        }
     },
     description: {
         type: DataTypes.STRING,
         allowNull: true,
     },
+    numLikes: {
+        type: DataTypes.INTEGER,
+        defaultValue: 0
+    }
 
 },
 {
     sequelize,
-    timestamps: false,
-    freezeTableName: true,
-    underscored: true,
+    timestamps: true,
+    underscored: false,
     modelName: 'post',
 });
 

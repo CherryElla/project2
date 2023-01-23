@@ -1,12 +1,10 @@
-
-
-
-
+// Sending the post form data to the server
 async function sendPostData () {
     let postForm = document.getElementById("postForm")
-    let fileInput = document.getElementById("selectFile")
     let formData = new FormData(postForm)
-    formData.append("image", fileInput.files[0])
+    formData.forEach((v,k)=>{
+        console.log(v,k)
+    })
     let response = await fetch ("/api/post/create", {
         method: "POST",
         body: formData
@@ -14,7 +12,7 @@ async function sendPostData () {
     switch (response.status) {
         case 200:
             // TODO: Remove Modal and refresh post list
-            console.log(response)
+            console.log(await response.json())
             break;
         default:
             // TODO: Display any errors in submission

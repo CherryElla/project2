@@ -61,20 +61,20 @@
                 <div class="modal-body">
                     <div class="container-md">
                         <div class="row imgDiv">
-                            <form id="postForm">
-                                <input type="file" class="chooseFile" id="selectFile"/>
+                            <form id="postForm" enctype="multipart/form-data">
+                                <input name="image" type="file" class="chooseFile" id="selectFile"/>
                                     <img id="tempImg"
                                         class="img-thumbnail"
                                         src="/images/paw.png"
                                     />
-                                
+                                <input name="description" type="text" id="description" style="width: 100%;" placeholder="Add description here..">
                             </form>
                         </div>
 
                     </div>
                 </div>
                 <div class="modal-footer">
-
+                    
                     <button
                         type="button"
                         class="btn btn-secondary"
