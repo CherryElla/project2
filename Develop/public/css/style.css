@@ -35,6 +35,10 @@ body {
     margin: 5px;
 }
 
+.cardBody {
+    padding: 10px;
+}
+
 .logo {
     padding-left: 30px;
     background-color: #31393c;
@@ -60,3 +64,8 @@ body {
 .postCard {
     margin: 10px;
 }
+
+.likeBtn {
+    margin-top: 10px;
+}
+
