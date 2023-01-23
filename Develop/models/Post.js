@@ -13,9 +13,16 @@ Post.init({
         type: DataTypes.STRING,
     },
     user_id: {
-        type: DataTypes.STRING,
+        type: DataTypes.INTEGER,
         references:{
             model: "user",
+            key: "id"
+        }
+    },
+    pet_id: {
+        type: DataTypes.INTEGER,
+        references: {
+            model: "pet",
             key: "id"
         }
     },
@@ -23,7 +30,7 @@ Post.init({
         type: DataTypes.STRING,
         allowNull: true,
     },
-    numLikes: {
+    likes: {
         type: DataTypes.INTEGER,
         defaultValue: 0
     }
