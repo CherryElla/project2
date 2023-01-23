@@ -44,11 +44,12 @@ body p {
 }
 
 
-.feed .rightCol {
-    border-left: solid;
-    border-left-color: #fdd35d;
+.rightCol {
+    margin-top: 20px;
+    border-radius: 20px;
     background-color: white;
-    background-image:url('/images/pawprint.jpeg');
+    background-image:url('/images/pawprint.jpg');
+    
 }
 
 

@@ -4,7 +4,7 @@ const TESTPOSTS = [{
     description: "This is my girl dog!!💖",
     createdAt: "moment",
     likes: 12,
-    imageFileName: "/testImages/corgy.jpg"
+    imageFileName: "../../testImages/corgy.jpg"
 },
 {
     user_name: "@Hellen",
@@ -12,7 +12,7 @@ const TESTPOSTS = [{
     description: "Always stealing my stuff #hesmyboy #dogowner",
     createdAt: "moment",
     likes: 14,
-    imageFileName: "/testImages/sandw.jpg"
+    imageFileName: "../../testImages/sandw.jpg"
 }
 ]
 

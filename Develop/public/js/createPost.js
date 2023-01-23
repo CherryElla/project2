@@ -16,7 +16,7 @@ async function sendPostData() {
 
             let post = await response.json();
             console.log(post);
-            await postDataRequest()
+            location.reload(true)
         break;
         default:
             // TODO: Display any errors in submission
@@ -24,24 +24,26 @@ async function sendPostData() {
             break;
     }
 }
-// Requesting TESTPOSTS array from server side demo.js with a fetch
-async function postDataRequest () {
-    let response = await fetch("/api/post/postdata", {
+
+// Requesting  feedView html with data from server side  with a fetch
+async function getFeed () {
+    let response = await fetch("/api/post/feed", {
         method: "GET"
     })
     if(response.status == 200) {
-        // Getting TESTPOSTS back and storing it in same name variable
-        let TESTPOSTS = await response.json()
-        console.log(TESTPOSTS)
+        // Getting data back and storing it in feedHTML
+        let feedHTML = await response.text()
+        console.log(feedHTML)
+        console.log(response)
     }
 }
+
 
 const postBtn = document.getElementById("postBtn");
 postBtn.addEventListener("click", sendPostData);
 
+// Upload post clicked, user prompt to choose file, then rendered to modal window
 function displayImg(event) {
-    // When upload image button clicked the user will be propted to select
-    // an image from their local and it will be rendered to window modal
     let imgTag = $("#tempImg");
     let read = new FileReader();
     let file = event.target.files[0];
