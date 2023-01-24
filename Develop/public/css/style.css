@@ -25,13 +25,24 @@ body {
 }
 
 body p {
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 30px;
     color: white;
+    font-size: 40px;
     padding-top: 3%;
-    padding-bottom: 3%;
-    padding-left: 20px;
+    padding-bottom: 2%;
+    padding-left: 10px;
     font-style: italic;
+}
+.card-text {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    color: white;
+    padding-bottom: 10%;
+    font-style: italic;
+    margin: 5px;
+}
+
+.cardBody {
+    padding: 10px;
 }
 
 .logo {
@@ -43,15 +54,48 @@ body p {
 }
 
 
-.feed .rightCol {
-    border-left: solid;
-    border-left-color: #fdd35d;
+.homepage .rightCol {
+    margin-top: 20px;
+    border-radius: 20px;
     background-color: white;
-    background-image:url('/images/pawprint.jpeg');
+    background-image:url('/images/pawprint.jpg');
+    background-size: contain;
+    margin-right: 30px;
+    
 }
 
-.feed .leftCol {
+.homepage .leftCol {
     vertical-align: middle;
+    border-radius: 20px;
+}
+
+.postCard {
+    margin: 10px;
+    border: solid;
+    border-color: white;
+    border-width: 5px;
+}
+
+.likeBtn {
+    margin-top: 10px;
+}
+
+/* Sign up/Log in HTML */
+#login {
+    width: 50%;
+    float: left;
+    padding: 100px;
+}
+
+#signup {
+    width: 50%;
+    float: right;
+    padding: 100px;
+}
+
+.userInput {
+    padding: 5px;
+
 }
 
 /* Sign up/Log in HTML */
