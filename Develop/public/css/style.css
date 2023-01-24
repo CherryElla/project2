@@ -20,6 +20,11 @@
     float: left;
 }
 
+#searchBar {
+    width: 500px;
+    padding: 5px;
+}
+
 body {
     background-color: #001f52;
 }
@@ -115,3 +120,4 @@ body p {
     padding: 5px;
 
 }
+
