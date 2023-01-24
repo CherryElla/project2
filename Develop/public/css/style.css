@@ -1,8 +1,14 @@
+@font-face {
+    font-family: "paw";
+    src: url("/images/paw.ttf");
+} 
+
 :root {
     /* --test-color1: #0D0D0D;
     --test-color2: #1A2601; */
 }
 
+/* Map HTML */
 #map {
     height: 800px;
     width: 60%;
@@ -18,3 +24,100 @@
     width: 500px;
     padding: 5px;
 }
+
+body {
+    background-color: #001f52;
+}
+
+body p {
+    color: white;
+    font-size: 40px;
+    padding-top: 3%;
+    padding-bottom: 2%;
+    padding-left: 10px;
+    font-style: italic;
+}
+.card-text {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    color: white;
+    padding-bottom: 10%;
+    font-style: italic;
+    margin: 5px;
+}
+
+.cardBody {
+    padding: 10px;
+}
+
+.logo {
+    padding-left: 30px;
+    background-color: #31393c;
+    color: #fdd35d;
+    font-family: "paw";
+    font-size: 100px;
+}
+
+
+.homepage .rightCol {
+    margin-top: 20px;
+    border-radius: 20px;
+    background-color: white;
+    background-image:url('/images/pawprint.jpg');
+    background-size: contain;
+    margin-right: 30px;
+    
+}
+
+.homepage .leftCol {
+    vertical-align: middle;
+    border-radius: 20px;
+}
+
+.postCard {
+    margin: 10px;
+    border: solid;
+    border-color: white;
+    border-width: 5px;
+}
+
+.likeBtn {
+    margin-top: 10px;
+}
+
+/* Sign up/Log in HTML */
+#login {
+    width: 50%;
+    float: left;
+    padding: 100px;
+}
+
+#signup {
+    width: 50%;
+    float: right;
+    padding: 100px;
+}
+
+.userInput {
+    padding: 5px;
+
+}
+
+/* Sign up/Log in HTML */
+#login {
+    width: 50%;
+    float: left;
+    padding: 100px;
+}
+
+#signup {
+    width: 50%;
+    float: right;
+    padding: 100px;
+}
+
+.userInput {
+    padding: 5px;
+
+}
+
