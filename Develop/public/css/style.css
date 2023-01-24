@@ -13,3 +13,8 @@
     width: 40%;
     float: left;
 }
+
+#searchBar {
+    width: 500px;
+    padding: 5px;
+}
