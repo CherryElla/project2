@@ -1,7 +1,9 @@
 @font-face {
     font-family: "paw";
     src: url("/images/paw.ttf");
-} 
+}
+
+
 
 :root {
     /* --test-color1: #0D0D0D;
@@ -21,7 +23,13 @@
 }
 /* Main HTML */
 body {
-    background-color: #001f52;
+    background: rgb(0, 12, 31);
+    background: linear-gradient(
+        -90deg,
+        rgba(0, 12, 31, 1) 0%,
+        rgba(0, 31, 82, 1) 35%,
+        rgba(199, 246, 255, 1) 100%
+    );
 }
 
 body p {
@@ -33,9 +41,25 @@ body p {
     font-style: italic;
 }
 
+header {
+    border-bottom: 2px dashed rgb(224, 222, 179);
+    height: 100px;
+}
+
+header nav {
+    text-align: end;
+    padding-top: 20px;
+    word-spacing: 10px;
+}
+
+header nav a {
+    text-decoration: none;
+    color: white;
+}
+
 /* Feed and Homepage */
 .card-text {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: "Courier New", Courier, monospace;
     font-size: 20px;
     color: white;
     padding-bottom: 10%;
@@ -48,38 +72,131 @@ body p {
 }
 
 .logo {
-    padding-left: 30px;
-    background-color: #31393c;
-    color: #fdd35d;
+    width: 200px;
+    padding-left: 40px;
+    color: #FDD35D;
     font-family: "paw";
-    font-size: 100px;
+    font-size: 150px;
+    position:absolute;
+    text-shadow: -3px 5px   white;
 }
-
 
 .homepage .rightCol {
     margin-top: 20px;
     border-radius: 20px;
     background-color: white;
-    background-image:url('/images/pawprint.jpg');
+    background-image: url("/images/pawprint.jpg");
     background-size: contain;
     margin-right: 30px;
-    
+    text-align: center;
 }
 
 .homepage .leftCol {
     vertical-align: middle;
     border-radius: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.homepage .leftCol .welcomeTitle {
+    padding-top: 350px;
+    text-align: center;
+    font-size: 50px;
+    font-style: italic;
 }
 
 .postCard {
+    opacity: 100%;
     margin: 10px;
     border: solid;
     border-color: white;
     border-width: 5px;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 }
 
 .likeBtn {
     margin-top: 30px;
+    background-color: #33A1FD;
+}
+
+.chatBtn ,.addBtn ,.heartBtn {
+    background-color: #FDD35D;
+    margin-top: 20px;
+}
+
+@keyframes wave {
+    0% {
+      transform: rotate(0deg);
+    }
+    10% {
+      transform: rotate(16deg);
+    }
+    20% {
+      transform: rotate(-6deg);
+    }
+    30% {
+      transform: rotate(16deg);
+    }
+    40% {
+      transform: rotate(-4deg);
+    }
+    50% {
+      transform: rotate(16deg);
+    }
+    60% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+  .waving-paw {
+    animation: wave 2.1s 0.6s infinite;
+    transform-origin: 75% 75%;
+    display: inline-block;
+  }
+
+  /* Welcome modal */
+  #mainTitle {
+    position: fixed;
+    font-family: Arial;
+    top: 600;
+    /* z-index: 99999; */
+    height: 50px;
+    width: 40%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.modalText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #FDD35D;
+    width: 100%;
+    padding: 50px;
+    border-radius: 20px;
+}
+
+.helloTitle {
+	font-size: 50px;
+	color: #33A1FD;
+	padding: 10px;
+    border-radius: 20px;
+    font-family: "paw";
+    letter-spacing: 20px;
+
+}
+
+.scroller {
+	color: white;
+	letter-spacing: 2px;
+	font-weight: 700;
+	padding: 30px;
+	font-size: 40px;
+    font-style: italic;
 }
 
 /* Sign up/Log in HTML */
@@ -97,7 +214,4 @@ body p {
 
 .userInput {
     padding: 5px;
-
 }
-
-

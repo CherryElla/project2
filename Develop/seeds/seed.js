@@ -8,7 +8,7 @@ const seedDatabase = async () => {
   // console.log(data.users)
   await sequelize.sync({ force: true });
 
-  const userObjs = makeUsers(10);
+  const userObjs = makeUsers(2);
   const users = await User.bulkCreate(userObjs, {
     individualHooks: true,
     returning: true,
@@ -17,7 +17,7 @@ const seedDatabase = async () => {
   const petObjs = makePets(20, users)
   const pets = await Pet.bulkCreate(petObjs)
 
-  const postObjs = makePosts(3, users, pets)
+  const postObjs = makePosts(2, users, pets)
   const posts = await Post.bulkCreate(postObjs)
 
   // console.log(posts)
