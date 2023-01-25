@@ -13,6 +13,7 @@ const IMAGES = [
     "../../testImages/pexels-sergio-souza-3198032.jpg",
     "../../testImages/sandw.jpg",
 ];
+const DESCRIPTIONS = ["Look at my cute little fluff!!! 💖", "My boy #doglover #puppypal 🐕", "Wow, really?? #doglife #woofwoof", "Getting it with my bestie #DOGSAREUS 🐶"]
 
 function makeUsers(N) {
     let users = [];
@@ -63,6 +64,7 @@ function makePosts(N, users, pets) {
                 posts.push({
                     // id: posts.length,
                     imageFileName: IMAGES[randomInt(IMAGES.length)],
+                    description: DESCRIPTIONS[randomInt(DESCRIPTIONS.length)],
                     user_id: user.id,
                     pet_id: userPets[randomInt(userPets.length)].id,
                 });
