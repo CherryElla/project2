@@ -2,6 +2,7 @@
 const sequelize = require('../config/connection');
 const router = require('express').Router();
 
+
 // Map Routes
 
 // Homepage/Feed route
@@ -9,3 +10,6 @@ const router = require('express').Router();
 // Sign up/Login Route
 
 //QNA Route
+
+// Map Routes
+
