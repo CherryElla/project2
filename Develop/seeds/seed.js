@@ -17,7 +17,7 @@ const seedDatabase = async () => {
   const petObjs = makePets(20, users)
   const pets = await Pet.bulkCreate(petObjs)
 
-  const postObjs = makePosts(30, users, pets)
+  const postObjs = makePosts(3, users, pets)
   const posts = await Post.bulkCreate(postObjs)
 
   // console.log(posts)

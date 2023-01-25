@@ -1,7 +1,7 @@
 const Post = require("../../models/Post");
 const router = require("express").Router();
 const uploadImage = require("../../middleware/upload");
-const TESTPOSTS = require("./demo");
+// const TESTPOSTS = require("./demo");
 
 
 // Looking out for a post request coming in from client named endpoint create
@@ -14,19 +14,19 @@ router.post("/create", uploadImage.single("image"), async (req, res, next) => {
             user_id: null, // Get user_id in the post data
             imageFileName: req.file.filename,
             description: req.body.description,
-            user_name: "jj",
-            pet_name: "Kiki", 
+            user_name: req.body.user_name,
+            pet_name: req.body.pet_name, 
             createdAt: "moment",
             likes: 12,
         };
         // Using dummy data array to push/append the postdata into
-        TESTPOSTS.push(postData)
+        // TESTPOSTS.push(postData)
         console.log(postData);
         // Response here is sending just the individual new postData object back to client
-        res.status(200).json(postData);
+        // res.status(200).json(postData);
         // TODO create database table
-        // let post = await Post.create(postData);
-        // res.status(200).json(post);
+        let post = await Post.create(postData);
+        res.status(200).json(post);
     } catch (err) {
         console.log("Error", err);
         res.status(500).json(err);

@@ -25,19 +25,6 @@ async function sendPostData() {
     }
 }
 
-// Requesting  feedView html with data from server side  with a fetch
-async function getFeed () {
-    let response = await fetch("/api/post/feed", {
-        method: "GET"
-    })
-    if(response.status == 200) {
-        // Getting data back and storing it in feedHTML
-        let feedHTML = await response.text()
-        console.log(feedHTML)
-        console.log(response)
-    }
-}
-
 
 const postBtn = document.getElementById("postBtn");
 postBtn.addEventListener("click", sendPostData);
