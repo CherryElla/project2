@@ -8,7 +8,7 @@ const seedDatabase = async () => {
   // console.log(data.users)
   await sequelize.sync({ force: true });
 
-  const userObjs = makeUsers(2);
+  const userObjs = makeUsers(3);
   const users = await User.bulkCreate(userObjs, {
     individualHooks: true,
     returning: true,
