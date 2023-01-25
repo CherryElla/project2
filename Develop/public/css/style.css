@@ -21,7 +21,12 @@
     width: 40%;
     float: left;
 }
-/* Main HTML */
+
+#searchBar {
+    width: 500px;
+    padding: 5px;
+}
+
 body {
     background: rgb(0, 12, 31);
     background: linear-gradient(
@@ -215,3 +220,4 @@ header nav a {
 .userInput {
     padding: 5px;
 }
+
