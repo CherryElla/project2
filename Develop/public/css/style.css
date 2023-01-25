@@ -19,7 +19,7 @@
     width: 40%;
     float: left;
 }
-
+/* Main HTML */
 body {
     background-color: #001f52;
 }
@@ -32,6 +32,8 @@ body p {
     padding-left: 10px;
     font-style: italic;
 }
+
+/* Feed and Homepage */
 .card-text {
     font-family: 'Courier New', Courier, monospace;
     font-size: 20px;
