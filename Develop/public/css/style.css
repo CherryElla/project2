@@ -98,20 +98,4 @@ body p {
 
 }
 
-/* Sign up/Log in HTML */
-#login {
-    width: 50%;
-    float: left;
-    padding: 100px;
-}
 
-#signup {
-    width: 50%;
-    float: right;
-    padding: 100px;
-}
-
-.userInput {
-    padding: 5px;
-
-}
