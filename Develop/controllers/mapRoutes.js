@@ -13,3 +13,5 @@ const router = require('express').Router();
 
 // Map Routes
 
+
+module.exports = router

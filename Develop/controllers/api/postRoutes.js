@@ -27,19 +27,5 @@ router.post("/create", uploadImage.single("image"), async (req, res, next) => {
     }
 });
 
-// Looking out for get request coming in from client named endpoint feed
-// router.get("/feed", async (req, res) => {
-//     try {
-//         // Sending TESTPOSTS back as the response
-//         // res.status(200).json(TESTPOSTS)
-//         // Responds by rendering the feedView HTML (ultimately the whole page) injecting the new array of data 
-//         res.render("feedView", {
-//             posts: TESTPOSTS
-//         })
-//     } catch (err) {
-//         res.status(500).json(err)
-
-//     }
-// })
 
 module.exports = router;
