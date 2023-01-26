@@ -1,13 +1,13 @@
 <div class="container">
     <form class="container-fluid p-2">
         <button
-            class="btn btn-info me-2"
+            class="btn addBtn me-2"
             type="button"
             data-bs-toggle="modal"
             data-bs-target="#addPost"
         >➕</button>
-        <button class="btn btn-info me-2" type="button">🖤</button>
-        <button class="btn btn-info me-2" type="button">💬</button>
+        <button class="btn heartBtn me-2" type="button">🖤</button>
+        <button class="btn chatBtn me-2" type="button">💬</button>
     </form>
     {{#each posts as |post|}}
         <div class="row newsPost">
@@ -29,7 +29,7 @@
                             </p>
                             <a
                                 href="#"
-                                class="btn btn-primary likeBtn"
+                                class="btn likeBtn"
                                 style="width: 70px; "
                             >Like
                             </a>

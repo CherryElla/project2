@@ -15,4 +15,4 @@ Post.belongsTo(User, {
   foreignKey: "user_id"
 })
 
-module.exports = { User, Pet };
+module.exports = { User, Pet, Post };

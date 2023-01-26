@@ -17,17 +17,26 @@
     </head>
 
     <body>
-        <header class="display-flex justify-space-between align-center">
+        <header
+            class="display-flex justify-space-between align-center headerNav"
+        >
             <h1 class="d-flex logo">
                 WOOFR
-                <p> ~ Be a part of the pack</p>
             </h1>
+            
+            {{!-- {{#if logged_in}} --}}
+            <nav>
 
-            {{#if logged_in}}
-                <nav>
-                    <button class="btn" id="logout">logout</button>
-                </nav>
-            {{/if}}
+                <a href="/">Home</a>
+                <a href="/profile">Profile</a>
+                <a href="/map">Locations</a>
+                <a href="/community">Community</a>
+                <a href="/signup">Signup</a>
+                <a id="logout" href="/logout">Logout</a>
+                <a id="loginBtn" href="/login">Login</a>
+
+            </nav>
+            {{!-- {{/if}} --}}
         </header>
 
         <main class="">
