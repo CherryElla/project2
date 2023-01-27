@@ -61,6 +61,19 @@ header nav a {
     text-decoration: none;
     color: white;
 }
+main {
+    padding-top: 80px;
+}
+
+main h2 {
+    text-align: center;
+}
+
+main form {
+    width: 300px;
+    margin: 0 auto;
+}
+
 
 /* Feed and Homepage */
 .card-text {
