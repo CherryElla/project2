@@ -1,36 +1,42 @@
-<nav class="navbar" style="background-color: white;">
-    <form class="container-fluid justify-content-end">
+<div class="container">
+    <form class="container-fluid p-2">
         <button
-            class="btn btn-outline-success me-2"
+            class="btn addBtn me-2"
             type="button"
             data-bs-toggle="modal"
             data-bs-target="#addPost"
         >➕</button>
-        <button class="btn btn-outline-success me-2" type="button">🖤</button>
-        <button class="btn btn-outline-success me-2" type="button">💬</button>
+        <button class="btn heartBtn me-2" type="button">🖤</button>
+        <button class="btn chatBtn me-2" type="button">💬</button>
     </form>
-</nav>
-<div class="" style="background-color: rgb(1, 53, 67); width: 100%;">
     {{#each posts as |post|}}
-        <div class="row">
-            <div class="col d-flex justify-content-center m-1">
+        <div class="row newsPost">
+            <div class="col d-flex justify-content-center">
 
-                <div class="card" style="width:400px;">
-                    <img src="{{post.photo}}" class="card-img-top" alt="..." />
-                    <div class="row card-body" style="height: 150px;">
+                <div class="postCard card" style="width:400px; ">
+                    <img
+                        src="/uploads/images/{{post.imageFileName}}"
+                        class="card-img-top"
+                        alt="..."
+                    />
+                    <div class="row card-body cardBody" >
                         <div class="card-title text-center">
-                            <h6>{{post.user_name}}
-                                <span class="d-flex justify-content-end">
-                                    1 👍
-                                </span>
-                            </h6>
-
-                            <p class="card-text">{{post.text}}</p>
+                            <h6>{{post.user_name}}</h6>
+                            <p
+                                class="card-text"
+                                style="color:black; height: 10px;"
+                            >{{post.description}} 
+                            </p>
                             <a
                                 href="#"
-                                class="btn btn-primary"
-                                style="width: 70px;"
-                            >Like</a>
+                                class="btn likeBtn"
+                                style="width: 70px; "
+                            >Like
+                            </a>
+                            <span class="d-flex justify-content-end postLikes">
+                                {{post.likes}}
+                                👍
+                            </span>
                         </div>
                     </div>
                 </div>
@@ -49,7 +55,8 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Create Post</h1>
+                    <h2 class="modal-title fs-5" id="exampleModalLabel">Create
+                        Post</h2>
                     <button
                         type="button"
                         class="btn-close"
@@ -58,10 +65,28 @@
                     ></button>
                 </div>
                 <div class="modal-body">
-                    <div class="container-md ">
-                        <div class="row">
-                            <input type="file">
-                            <img src="/images/paw.png" alt="paw silhouette" style="opacity: 20%;">
+                    <div class="container-md">
+                        <div class="row imgDiv">
+                            <form id="postForm" enctype="multipart/form-data">
+                                <input
+                                    name="image"
+                                    type="file"
+                                    class="chooseFile"
+                                    id="selectFile"
+                                />
+                                <img
+                                    id="tempImg"
+                                    class="img-thumbnail"
+                                    src="/images/paw.png"
+                                />
+                                <input
+                                    name="description"
+                                    type="text"
+                                    id="description"
+                                    style="width: 100%;"
+                                    placeholder="Add description here.."
+                                />
+                            </form>
                         </div>
 
                     </div>
@@ -73,7 +98,11 @@
                         class="btn btn-secondary"
                         data-bs-dismiss="modal"
                     >Cancel</button>
-                    <button type="button" class="btn btn-primary">Post</button>
+                    <button
+                        id="postBtn"
+                        type="button"
+                        class="btn btn-primary"
+                    >Post</button>
                 </div>
             </div>
         </div>

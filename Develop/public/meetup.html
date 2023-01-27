@@ -36,6 +36,9 @@
 
 <body>
     <div id="locations">
+        <div>
+            <input id='searchInput' type="text">
+        </div>
         <div class="container">
             <h2>This would be the name</h2>
             <p>This is a description or address</p>
@@ -51,12 +54,11 @@
     </div>
 
     <div id="map">
-        <h1>this is a test for maps</h1>
     </div>
 
     <!-- Google Map Script -->
     <script async
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCBD1NsXTVxcgO86ghZ7g37lcXZBKl9gGc&callback=initMap">
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCBD1NsXTVxcgO86ghZ7g37lcXZBKl9gGc&callback=initMap&libraries=places">
     </script>
 
     <!-- Boostrap JS -->
