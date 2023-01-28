@@ -28,15 +28,15 @@
                             >{{post.description}} 
                             </p>
                             <a
-                                href="#"
                                 class="btn likeBtn"
                                 style="width: 70px; "
+                                data-post-id="{{post.id}}"
                             >Like
                             </a>
-                            <span class="d-flex justify-content-end postLikes">
-                                {{post.likes}}
+                            <div class="postLikes">
+                                <span id="like-{{post.id}}">{{post.likes}}</span>
                                 👍
-                            </span>
+                            </div>
                         </div>
                     </div>
                 </div>

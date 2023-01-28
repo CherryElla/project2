@@ -5,10 +5,10 @@
 
 
 
-:root {
+/* :root { */
     /* --test-color1: #0D0D0D;
     --test-color2: #1A2601; */
-}
+/* } */
 
 /* Map HTML */
 #map {
@@ -249,7 +249,7 @@ main form {
     align-items: flex-start;
     flex-shrink: 0;
     border-color: transparent;
-    background-color: rgba(0, 31, 82, 1);
+    /* background-color: rgba(0, 31, 82, 1); */
   }
   .final-view-answers {
     top: 265px;
@@ -361,6 +361,8 @@ main form {
   }
   .final-view-text04 {
     color: rgba(253, 211, 93, 1);
+    background-color: #33A1FD;
+    border-radius: 20px;
     width: 1217px;
     height: auto;
     position: absolute;

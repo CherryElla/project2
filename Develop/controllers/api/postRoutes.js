@@ -28,4 +28,17 @@ router.post("/create", uploadImage.single("image"), async (req, res, next) => {
 });
 
 
+router.post("/like", async (req, res) => {
+    try {
+        console.log(req.body)
+        await Post.increment({likes: 1},
+            {where: {id: req.body.post_id}})
+            res.sendStatus(200)
+    } catch (err) {
+        console.log(err)
+        res.status(500).json(err)
+    }
+})
+
+
 module.exports = router;
