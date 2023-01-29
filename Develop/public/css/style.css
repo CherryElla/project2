@@ -175,7 +175,7 @@ main form {
     display: inline-block;
   }
 
-  /* Welcome modal */
+  /* Welcome box */
   #mainTitle {
     position: fixed;
     font-family: Arial;
@@ -216,6 +216,50 @@ main form {
 	font-size: 40px;
     font-style: italic;
 }
+
+/* Heart Modal */
+.heartModal {
+  display: none;
+  position: fixed;
+  left: 30%;
+  right: 30%;
+  z-index: 1;
+  top: 10;
+  width: 500px;
+  height: 670px;
+  overflow: auto;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.heartModalContent {
+  margin: 0 auto;
+  /* padding: 5px; */
+  width: 80%;
+}
+
+#heartModalText {
+  font-size: 15px;
+  font-style: normal;
+  color: black;
+}
+
+.closeModal {
+  color: white;
+  margin: 0;
+  font-size: 18px;
+  border: solid;
+  border-color: #33A1FD;
+  border-radius: 5px;
+  background-color: #33A1FD;
+}
+
+.line{
+  width: 80%;
+  height: 47px;
+  border-bottom: 1px solid rgb(89, 89, 89);
+  position: absolute;
+  }
 
 /* Sign up/Log in HTML */
 #login {

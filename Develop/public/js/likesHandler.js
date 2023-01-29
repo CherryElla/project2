@@ -4,6 +4,7 @@ let likesBtns = document.querySelectorAll(".likeBtn");
 // attribute and create likeData object to send
 for (let btn of likesBtns) {
     btn.addEventListener("click", async () => {
+        playSound()
         console.log("working");
         let likePostId = btn.getAttribute("data-post-id");
         let likeData = {
@@ -37,6 +38,21 @@ for (let btn of likesBtns) {
 
 // Event listener on the heart button 
 let heart = document.querySelector(".heartbtn");
+
 heart.addEventListener("click", () => {
     console.log("you clicked heart");
+    heartModal.style.display = "block";
 });
+
+let heartModal = document.getElementById("heartModal")
+let closeBtn = document.getElementsByClassName("closeModal")[0];
+
+closeBtn.addEventListener("click", () => {
+    heartModal.style.display = "none"
+})
+
+function playSound () {
+    let sound = new Audio("/images/dog-squeak.mp3");
+    sound.loop = false;
+    sound.play()
+}
