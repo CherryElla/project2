@@ -12,6 +12,9 @@ const IMAGES = [
     "../../testImages/pexels-neil-ryan-famoso-saraña-7107434.jpg",
     "../../testImages/pexels-sergio-souza-3198032.jpg",
     "../../testImages/sandw.jpg",
+    "../../testImages/pexels-samson-katt-5256722.jpg",
+    "../../testImages/pexels-meruyert-gonullu-6589016.jpg",
+    "../../testImages/dog-g80e57fc09_1920.jpg"
 ];
 const DESCRIPTIONS = ["Look at my cute little fluff!!! 💖", "My boy #doglover #puppypal 🐕", "Wow, really?? #doglife #woofwoof", "Getting it with my bestie #DOGSAREUS 🐶"]
 
