@@ -1,0 +1,48 @@
+.input {
+    padding: 5px;
+    margin: 0px;
+}
+
+#map {
+    height: 800px;
+    width: 60%;
+    float: right;
+}
+
+#locationContainer {
+    /* background-color: brown; */
+    border-color: black;
+    display: block;
+    float: left;
+    width: 760px;
+    padding: 10px;
+    margin: 0;
+}
+
+#searchContainer {
+    padding: 5px;
+    margin: 0;
+}
+
+#savedContainer {
+    padding: 5px;
+    margin: 0;
+}
+
+#searchBtn {
+    border-radius: .25rem;
+    background-color: skyblue;
+    transition-duration: 0.4s;
+    padding: 5px;
+    margin: 0;
+    right: 50px;
+}
+
+#searchBtn:hover {
+    background-color: darkcyan;
+    color: white;
+}
+
+#locationName {
+    left: 5px;
+}
