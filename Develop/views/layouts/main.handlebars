@@ -23,10 +23,8 @@
             <h1 class="d-flex logo">
                 WOOFR
             </h1>
-            
             {{!-- {{#if logged_in}} --}}
             <nav>
-
                 <a href="/">Home</a>
                 <a href="/profile">Profile</a>
                 <a href="/map">Locations</a>
@@ -34,17 +32,13 @@
                 <a href="/signup">Signup</a>
                 <a id="logout" href="/logout">Logout</a>
                 <a id="loginBtn" href="/login">Login</a>
-
             </nav>
             {{!-- {{/if}} --}}
         </header>
-
         <main class="">
             {{{body}}}
         </main>
-
         <footer></footer>
-
         {{#if logged_in}}
             <script src="/js/logout.js"></script>
         {{/if}}
@@ -54,7 +48,6 @@
             crossorigin="anonymous"
         ></script>
         <script src="/js/createPost.js"></script>
-        
     </body>
-<script src="/js/likesHandler.js"></script>
+    <script src="/js/likesHandler.js"></script>
 </html>
