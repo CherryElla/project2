@@ -10,3 +10,4 @@ Run npm install and run the sh file to execute MySQL and seed the database in on
 sh seeds/run.sh
 ```
 ## Usage
+
