@@ -165,4 +165,12 @@ router.delete("/:id", (req, res) => {
     });
 });
 
+router.get("/profile", (req, res) => {
+  if (req.session.loggedIn) {
+    res.redirect("/");
+    return;
+  }
+  res.render("profile");
+});
+
 module.exports = router;
