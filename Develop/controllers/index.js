@@ -15,7 +15,7 @@ router.use("/community", askRoutes)
 
 router.use('/map', mapRoutes);
 
-router.use('profile', userRoutes);
+router.use('/profile', userRoutes);
 
 
 router.use((req, res) => {

@@ -17,6 +17,9 @@ router.get("/", async (req, res) => {
     }
 });
 
+router.get('/', async (req, res) => {
+    res.render('map');
+});
 
 // Sign Up and Login Routes
 
