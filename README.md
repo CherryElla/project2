@@ -29,7 +29,7 @@ Navigate to the profile page to edit/update details, to the community page to re
 
 The following applications, frameworks, libraries, and technologies were used in the creation of WOOFR:
 
-- Node.js
+- Node.js and Nodemon
 - Express.js
 - Handlebars.js
 - MySQL and Sequelize ORM
