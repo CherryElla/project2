@@ -1,4 +1,3 @@
-
 // Creating an Array for saved Locations
 const saveBtn = document.querySelector('.saveBtn');
 const searchBtn = document.querySelector('.searchBtn');
