@@ -134,8 +134,12 @@ main form {
 }
 
 .likeBtn {
-    margin-top: 30px;
+    margin-top: 40px;
     background-color: #33A1FD;
+}
+
+.postLikes {
+  margin-top: 20px;
 }
 
 .chatBtn ,.addBtn ,.heartBtn {
@@ -276,6 +280,63 @@ main form {
 
 .userInput {
     padding: 5px;
+}
+
+/* Location/map Page */
+.input {
+  padding: 5px;
+  margin: 0px;
+}
+
+#map {
+  height: 800px;
+  width: 100%;
+  border: solid;
+  border-color: #33A1FD;
+  border-radius: 20px;
+  
+}
+
+#locationContainer {
+  /* background-color: brown; */
+  border-color: black;
+  /* display: block; */
+  /* float: left; */
+  /* width: 760px; */
+  padding: 10px;
+  margin: 0;
+}
+
+#searchContainer {
+  /* padding: 20px; */
+  margin: 20px;
+}
+
+#savedContainer {
+  /* padding: 5px; */
+  margin: 0;
+}
+
+#searchBtn {
+  /* border-radius: .25rem; */
+  /* background-color: skyblue; */
+  /* transition-duration: 0.4s; */
+  padding: 5px;
+  margin: 0;
+  /* right: 50px; */
+}
+
+#saveBtn {
+  color: white;
+}
+
+/* #searchBtn:hover {
+  background-color: darkcyan;
+  color: white;
+} */
+
+#locationName {
+  left: 5px;
 }
 
 
