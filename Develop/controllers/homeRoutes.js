@@ -8,7 +8,7 @@ router.get("/", async (req, res) => {
     try {
         const postData = await Post.findAll();
         const posts = postData.map(p => p.dataValues)
-        // console.log(posts)
+        posts.reverse()
         res.render("homepage", {
             posts: posts,
         });

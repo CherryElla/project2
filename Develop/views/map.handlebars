@@ -1,33 +1,34 @@
-<div id="locationContainer">
+<div class="container"  id="locationContainer">
 
-      <div id="searchContainer">
-          
-        <div id="addressContainer" class="input">
-          <h6>Enter In Address</h4>
-          <input id="addressInput" type="text">
+    <div class="row" id="searchContainer">
+        <div class="col-6">
+            <div id="addressContainer" class="input">
+                <h6>Enter In Address</h4>
+                <input id="addressInput" type="text">
+            </div>
+            <div id="nameContainer" class="input">
+                <h6>Enter Location Name</h4>
+                <input id="locationName" type="text">
+            </div>
+            <div id="typeContainer" class="input">
+                <h6>Enter the Location Service Type (Adoption Center, Dog Park, etc.)</h4>
+                <input id="locationType" type="text">
+            </div>
+                <button id="searchBtn" class="btn btn-primary searchBtn" type="submit">Search</button>
+                <button id="saveBtn" class="btn btn-info saveBtn" type="submit">Save</button>
         </div>
-        <div id="nameContainer" class="input">
-          <h6>Enter Location Name</h4>
-          <input id="locationName" type="text">
-        </div>
-        <div id="typeContainer" class="input">
-          <h6>Enter the Location Service Type (Adoption Center, Dog Park, etc.)</h4>
-          <input id="locationType" type="text">
-        </div>
-        <button id="searchBtn" class="searchBtn" type="submit">Search</button>
-        <button id="saveBtn" class="saveBtn" type="submit">Save</button>
-      </div>
 
-      <div id="savedContainer" cl>
-        <div class="card">
-          <h2>tHIS PLACE</h2>
-          <div class="card-body">
-            <h4>address</h4>
-            <p>this place is great!</p>
-          </div>
+        <div class="col-6" id="savedContainer" cl>
+            <div class="card">
+                <h2>My Searched Places 	🐾</h2>
+                <div class="card-body">
+                    <h4>address</h4>
+                    <p>this place is great!</p>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
+</div>
 
     <div id="map">
     </div>

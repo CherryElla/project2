@@ -1,16 +1,15 @@
 const multer = require("multer")
 const util = require("util")
 const path = require("path")
-
+// Multer is a middleware for handling multipart/form data, for file uploads
 
 // Creating a function that checks for specified file and mime types and ext names
 const fileTypeChecker = function (file, callback) {
     // File extentions to allow
     const fileTypes = /jpg|jpeg|gif|png|svg/
-
     // Extention name check
     const extenName = fileTypes.test(path.extname(file.originalname).toLowerCase())
-
+    // Mimetype check
     const mimetype = fileTypes.test(file.mimetype)
 
     if (mimetype && extenName) {
