@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User } = require('../../models');
+const { User } = require('../models');
 
 // Get user by id
 router.get("/:id", (req, res) => {
@@ -165,7 +165,7 @@ router.delete("/:id", (req, res) => {
     });
 });
 
-router.get("/profile", (req, res) => {
+router.get("/", (req, res) => {
   if (req.session.loggedIn) {
     res.redirect("/");
     return;
