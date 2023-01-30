@@ -1,16 +1,15 @@
 const multer = require("multer")
 const util = require("util")
 const path = require("path")
+// Multer is a middleware for handling multipart/form data, for file uploads
 
-
-
+// Creating a function that checks for specified file and mime types and ext names
 const fileTypeChecker = function (file, callback) {
     // File extentions to allow
     const fileTypes = /jpg|jpeg|gif|png|svg/
-
     // Extention name check
     const extenName = fileTypes.test(path.extname(file.originalname).toLowerCase())
-
+    // Mimetype check
     const mimetype = fileTypes.test(file.mimetype)
 
     if (mimetype && extenName) {
@@ -20,7 +19,9 @@ const fileTypeChecker = function (file, callback) {
     }
 }
 
-const storageEngine = multer.diskStorage({
+// Instantiating multers storageengine obj with options - 
+// Telling engine to save images in this dir and telling engine images new file name
+const storageEngineObject = multer.diskStorage({
     destination: (req, file, callback) => {
         let targetDir = path.resolve(__dirname, "../public/uploads/images")
         callback(null, targetDir)
@@ -30,8 +31,9 @@ const storageEngine = multer.diskStorage({
     }
 });
 
+// Using Multer object to build object with file size limit and filetype()
 const uploadImage = multer({
-    storage: storageEngine,
+    storage: storageEngineObject,
     limits: { fileSize: 10000000},
     fileFilter: (req, file, callback) => {
         fileTypeChecker(file, callback)

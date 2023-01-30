@@ -1,3 +1,7 @@
+// Creating an Array for saved Locations
+const saveBtn = document.querySelector('.saveBtn');
+const searchBtn = document.querySelector('.searchBtn');
+
 // Map function
 function initMap() {
 
@@ -11,6 +15,9 @@ function initMap() {
         center: location,
         zoom: 9
     }
+
+    var geocoder = new google.maps.Geocoder();
+    const infowindow = new google.maps.InfoWindow();
 
     // Geolocation
     if(navigator.geolocation) {
@@ -37,26 +44,67 @@ function initMap() {
 
     };
 
-    // Uses Google Place ID for search bar
-    autocomplete = new google.map.places.Autocomplete(document.getElementById('searchInput'), 
-    {   
-        // Restrictions
-        componentRestrictions: {'country': ['us']},
-        fields: ["geometry", "name"],
-        types: ['establishment']
-    })
-
-    // Listener for search bar
-    google.maps.event.addListener(autocomplete, "place_changed", function() {
-
-        // Connects to map
-        const place = autocomplete.getPlace();
-        new google.maps.Marker({
-            position: place.geometry.location,
-            title: place.name,
-            map: map
-        })
-    })
+    
 };
 
 initMap();
+
+// Button Functions
+
+// Saves user data to cards
+saveBtn.addEventListener('click', function() {
+    console.log('ive been clicked')
+
+    var addressInput = document.getElementById('addressInput').value;
+    var locationName = document.getElementById('locationName').value;
+    var locationType = document.getElementById('locationType').value;
+
+
+    document.getElementById('savedContainer').innerHTML += `
+    <div class="card">
+    <h2>${locationName}</h2>
+    <div class="card-body">
+      <h4>${addressInput}</h4>
+      <p>${locationType}</p>
+    </div>
+  </div>`
+
+  geocodeAddress(geocoder, map, infowindow);
+}, { passive: false });
+
+searchBtn.addEventListener('click', function() {
+    geocodeAddress(geocoder, map, infowindow);
+});
+
+// Address Geocoder Requirements
+const geocoder = new google.maps.Geocoder();
+const infowindow = new google.maps.InfoWindow();
+
+// Address to Coords function
+function geocodeAddress(geocoder, map, infowindow) {
+    const addressInput = document.getElementById("addressInput").value;
+  
+    if (!addressInput) {
+        console.log('Please put in an address!');
+    } else {
+        geocoder
+      .geocode({ address: addressInput })
+      .then(({ results }) => {
+        if (results[0]) {
+          map.setZoom(11);
+          map.setCenter(results[0].geometry.location);
+  
+          const marker = new google.maps.Marker({
+            map,
+            position: results[0].geometry.location,
+          });
+  
+          infowindow.setContent(results[0].formatted_address);
+          infowindow.open(map, marker);
+        } else {
+          window.alert("No results found");
+        }
+        })
+        .catch((e) => window.alert("Geocoder failed due to: " + e));
+    };
+  }

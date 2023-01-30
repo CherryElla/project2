@@ -8,7 +8,7 @@ router.get("/", async (req, res) => {
     try {
         const postData = await Post.findAll();
         const posts = postData.map(p => p.dataValues)
-        // console.log(posts)
+        posts.reverse()
         res.render("homepage", {
             posts: posts,
         });
@@ -17,6 +17,9 @@ router.get("/", async (req, res) => {
     }
 });
 
+router.get('/', async (req, res) => {
+    res.render('map');
+});
 
 // Sign Up and Login Routes
 
