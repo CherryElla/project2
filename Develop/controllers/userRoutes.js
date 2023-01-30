@@ -145,7 +145,7 @@ router.delete("/:id", (req, res) => {
 
 router.get("/", (req, res) => {
   if (req.session.loggedIn) {
-    res.redirect("/");
+    res.redirect("/profile");
     return;
   }
   res.render("profile");
