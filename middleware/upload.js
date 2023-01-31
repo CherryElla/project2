@@ -1,6 +1,6 @@
 const multer = require("multer")
-const util = require("util")
 const path = require("path")
+const fs = require("fs")
 // Multer is a middleware for handling multipart/form data, for file uploads
 
 // Creating a function that checks for specified file and mime types and ext names
@@ -24,6 +24,9 @@ const fileTypeChecker = function (file, callback) {
 const storageEngineObject = multer.diskStorage({
     destination: (req, file, callback) => {
         let targetDir = path.resolve(__dirname, "../public/uploads/images")
+        if (!fs.existsSync(targetDir)) {
+            fs.mkdirSync(targetDir, { recursive: true })
+        }
         callback(null, targetDir)
     },
     filename: (req, file, callback) => {
