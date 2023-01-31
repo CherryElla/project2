@@ -145,10 +145,10 @@ router.delete("/:id", (req, res) => {
 });
 
 router.get("/", (req, res) => {
-  if (req.session.loggedIn) {
-    res.redirect("/");
-    return;
-  }
+  // if (req.session.loggedIn) {
+  //   // res.redirect("/");
+  //   return;
+  // }
   res.render("profile");
 });
 

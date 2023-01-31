@@ -339,6 +339,33 @@ main form {
   left: 5px;
 }
 
+#newPostProfile {
+  color: white;
+}
+
+.aboutMe {
+  border: solid;
+  border-color: #33A1FD;
+  width: 500px;
+  margin: 0 auto;
+  border-radius: 20px;
+}
+
+.userProfileDiv {
+  border: solid;
+  border-color: #33A1FD;
+  width: 500px;
+  margin: 0 auto;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 20px;
+  text-align: center;
+}
+.userProfileDiv a{
+  text-decoration: none;
+  color: white;
+  text-align: center;
+}
 
 /* Ask View Page */
 
