@@ -1,2 +1,0 @@
-DROP DATABASE IF EXISTS woofr_db;
-CREATE DATABASE woofr_db;
