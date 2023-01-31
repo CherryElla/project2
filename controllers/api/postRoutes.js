@@ -9,7 +9,7 @@ router.post("/create", uploadImage.single("image"), async (req, res, next) => {
     // req.file will hold the image file
     // req.body will hold the description
     try {
-        console.log(req);
+        console.log(req.session.user_id);
         let postData = {
             user_id: 3, // TODO: get actual user id from session info - must be sent by client
             imageFileName: req.file.filename,
