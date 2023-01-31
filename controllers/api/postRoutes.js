@@ -11,7 +11,6 @@ router.post("/create", uploadImage.single("image"), async (req, res, next) => {
     try {
         console.log(req);
         let postData = {
-            user_id: 3,
             imageFileName: req.file.filename,
             description: req.body.description,
             // user_name: req.body.user_name,
